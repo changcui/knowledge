@@ -31,7 +31,7 @@ Kernel Tricks:
 
 ![image-20181211163451395](Like-What-You-Like/image-20181211163451395.png)
 
-#### 感想：
+#### 感想
 
 优点：借鉴了很多 Domain adaptation, Transfer Learning 里面的东西，给 distill 提供了一些新的 idea, 使用了 Kernel Trick 增加了可扩展性，提供了直观上的理解为什么去使用 NST, 而不是直接用 Feature Map 做一个 MSE Loss，把一个迁移问题看作是一个 Distribution Match 的问题，是一个新颖的角度，神经网络本身就是在学习一种分布。
 
