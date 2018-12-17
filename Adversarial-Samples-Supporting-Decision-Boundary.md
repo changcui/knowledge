@@ -8,37 +8,37 @@ In general, samples near the decision boundary of a classifier have a larger imp
 
 ### Benefits of BSSs in knowledge distillation
 
-A boundary supporting sample (BSS) is defined in this respect, it is an adversarial sample that lies near the decision boundary of a teacher classifier. Since BSSs are labeled samples near decision boundary as depicted in the second picture of Figure 1, they contain the information about the decision boundary.![Screen Shot 2018-12-17 at 3.56.29 PM](Adversarial-Samples-Supporting-Decision-Boundary/Screen Shot 2018-12-17 at 3.56.29 PM.png)
+A boundary supporting sample (BSS) is defined in this respect, it is an adversarial sample that lies near the decision boundary of a teacher classifier. Since BSSs are labeled samples near decision boundary as depicted in the second picture of Figure 1, they contain the information about the decision boundary.![Screen Shot 2018-12-17 at 3.56.29 PM](Adversarial-Samples-Supporting-Decision-Boundary/1.png)
 
 ### Iterative Scheme to find a BSS
 
 The loss function for the attack to the target class k is defined by
 
-![Screen Shot 2018-12-17 at 3.59.28 PM](Adversarial-Samples-Supporting-Decision-Boundary/Screen Shot 2018-12-17 at 3.59.28 PM.png)
+![Screen Shot 2018-12-17 at 3.59.28 PM](Adversarial-Samples-Supporting-Decision-Boundary/2.png)
 
 This loss becomes zero at a point on the decision boundary, positive at a point within the base class, and negative at an adversarial point within the target class. 
 
 To find an adversarial sample, we move the sample to the direction minimizing
-the loss by the iterative scheme in![Screen Shot 2018-12-17 at 4.00.46 PM](Adversarial-Samples-Supporting-Decision-Boundary/Screen Shot 2018-12-17 at 4.00.46 PM.png)
+the loss by the iterative scheme in![Screen Shot 2018-12-17 at 4.00.46 PM](Adversarial-Samples-Supporting-Decision-Boundary/3.png)
 
-The iteration stops if one of the following conditions occurs:![Screen Shot 2018-12-17 at 4.02.01 PM](Adversarial-Samples-Supporting-Decision-Boundary/Screen Shot 2018-12-17 at 4.02.01 PM.png)
+The iteration stops if one of the following conditions occurs:![Screen Shot 2018-12-17 at 4.02.01 PM](Adversarial-Samples-Supporting-Decision-Boundary/4.png)
 
 ### Knowledge distillation using BSS
 
 The proposed loss function to train the student classifier combines
 three losses:
 
-![Screen Shot 2018-12-17 at 4.03.05 PM](Adversarial-Samples-Supporting-Decision-Boundary/Screen Shot 2018-12-17 at 4.03.05 PM.png)
+![Screen Shot 2018-12-17 at 4.03.05 PM](Adversarial-Samples-Supporting-Decision-Boundary/5.png)
 
  each loss is defined by:
 
-![Screen Shot 2018-12-17 at 4.05.38 PM](Adversarial-Samples-Supporting-Decision-Boundary/Screen Shot 2018-12-17 at 4.05.38 PM.png)
+![Screen Shot 2018-12-17 at 4.05.38 PM](Adversarial-Samples-Supporting-Decision-Boundary/6.png)
 
 ### Metrics for similarity of decision boundaries
 
 The similarity between the two decision boundaries is defined by two metrics: The Magnitude Similarity (MagSim) and the Angle similarity (AngSim) in:
 
-![Screen Shot 2018-12-17 at 4.10.00 PM](Adversarial-Samples-Supporting-Decision-Boundary/Screen Shot 2018-12-17 at 4.10.00 PM.png)
+![Screen Shot 2018-12-17 at 4.10.00 PM](Adversarial-Samples-Supporting-Decision-Boundary/7.png)
 
 Note that MagSim represents the similarity with respect to the distance from the base sample to the decision boundary. and AngSim depicts that with respect to the path direction from the base sample to the boundary. 
 
