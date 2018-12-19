@@ -42,8 +42,10 @@ The similarity between the two decision boundaries is defined by two metrics: Th
 
 Note that MagSim represents the similarity with respect to the distance from the base sample to the decision boundary. and AngSim depicts that with respect to the path direction from the base sample to the boundary. 
 
-感想：
+### 感想：
 
 优点：Idea 很新颖，蒸馏问题的关键之一就是如何去定义知识，本篇论文给出的答案是 decision boundary，如果 student 能够学到像 teacher 一样的 decision boundary，那么在处理边界附近的点就会有更高的成功率，也就是说泛化能力会更强，这一点可以参考 SVM 里面边界取得越好，泛化能力越强；从 decision boundary 出发，延伸出来的问题是怎么取学到它，文章中给出的答案是使用 adversarial sample，当 teacher 无法去分类对抗样本时，说明对抗样本在边界上，这个是符合直觉的，文章中也给出了图示；进而衍生的问题是，如何生成对抗样本，文章中采用迭代的方式，从一个 base sample 出发，经过数轮迭代生成对抗样本；如何去学习决策边界，文中加了一个新的 loss，名为 BS Loss，其实就是 teacher 网络对 adversarial sample 的输出结果和 student 网络相应输出结果的 cross entropy；文章中对一些细节问题处理得很好，比如迭代何时停止，迭代是否有效，迭代的步长，BS loss 中的概率等；文中给出的 metrics 去衡量学习决策边界的好坏很有意思，分别衡量了 base sample 到决策边界的距离和方向，并对比了 KT 和文中提出的方法，给出了 KT 的问题所在；文章实验很充分，用了很多数据集，与 KT, fitnet, fsp 等方法进行对比，并对比了产生对抗样本的不同方法。
 
 缺点：使用的数据集过小，无法证明在大规模数据集上的适用性；决策边界只能适用于分类问题，在回归等其他问题上不适用，当然这个缺点 KT 也有；提升效果并不是很明显。
+
+[Knowledge Distillation with Adversarial Samples Supporting Decision Boundary](https://arxiv.org/abs/1805.05532)
