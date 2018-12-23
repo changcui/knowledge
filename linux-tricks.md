@@ -27,3 +27,24 @@
   # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
   ```
 
+###  [Open Port](https://askubuntu.com/questions/648970/open-a-port-on-ubuntu-14-04#825061)
+
+- temporary
+
+  `sudo iptables -I INPUT -p tcp -s 0.0.0.0/0 --dport 9000 -j ACCEPT`
+
+- permanent
+
+  ```bash
+  iptables-save > /etc/iptables.conf # Save this changes to file
+  touch /etc/network/if-up.d/iptables # Create file to call conf from
+  echo "iptables-restore < /etc/iptables.conf" >> /etc/network/if-up.d/iptables # Add this line to this file
+  chmod +x /etc/network/if-up.d/iptables  # Make the script executable
+  ```
+
+### [/usr/bin/ld: Cannot find -l$name](https://stackoverflow.com/questions/16710047/usr-bin-ld-cannot-find-lnameofthelibrary)
+
+`apt-get install libfoo-dev`
+
+
+
