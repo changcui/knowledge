@@ -46,5 +46,13 @@
 
 `apt-get install libfoo-dev`
 
+### [pip install - locale.Error: unsupported locale setting](https://stackoverflow.com/questions/36394101/pip-install-locale-error-unsupported-locale-setting)
+
+just run the following command:
+
+`export LC_ALL=C`
+
+If you keep getting the error in new terminal windows, add it at the bottom of your `.bashrc` file.
+
 
 
