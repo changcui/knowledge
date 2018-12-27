@@ -32,6 +32,10 @@
 
   `a.squeeze()`不加参数去除所有是1的维度
 
+- 按标号选择
+
+  `a.index_select(dim=1, b)`但要求 b 必须是1维的，如果是高维的需要 cat
+
 ## torch.nn.functional
 
 - 归一化
