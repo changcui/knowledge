@@ -28,11 +28,27 @@
 
   `a.mean(dim=2)` 对第2维求平均值
 
+- 收缩维度
+
+  `a.squeeze()`不加参数去除所有是1的维度
+
 ## torch.nn.functional
 
 - 归一化
 
-  `normalize(a, dim=2)`对第2维进行归一化
+  `F.normalize(a, dim=2)`对第2维进行归一化
 
+- 全局平均值池化
 
+  `F.adaptive_avg_pool2d(x, (1, 1))`将 NCHW 变成 NC11
+
+- softmax
+
+  `F.softmax(x, dim=1)`在第1维执行 softmax
+
+  `F.log_softmax(x, dim=1)`在第1维执行 log_softmax
+
+- KL 散度
+
+  `F.kl_div(F.log_softmax(a, dim=1), F.softmax(b, dim=1))`计算 KL 散度，注意第1个参数要使用 log_softmax
 
