@@ -54,5 +54,21 @@ just run the following command:
 
 If you keep getting the error in new terminal windows, add it at the bottom of your `.bashrc` file.
 
+### [Apache shows php code instead of executing](https://stackoverflow.com/questions/12142172/apache-shows-php-code-instead-of-executing)
+
+```bash
+sudo apt-get install php libapache2-mod-php
+sudo a2enmod mpm_prefork && sudo a2enmod php7.0
+sudo service apache2 restart
+```
+
+Of course, you need to install apache2 firstly.
+
+
+
+
+
+### 
+
 
 
