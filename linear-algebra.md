@@ -49,3 +49,27 @@ Some notation:
 - The above method is based on no row exchange. That means every pivot lies on the right row. If not, we should add a permutation matrix namely P, then the final form will be A = PLU.
 - The operation counts will be about one third n cubed. In the left-hand of the equation Ax=b, the factorization of A will cost  n^2 + (n-1)^2 + ...+ 1^2, in which every element in the expression is the elemination cost. In the right-hand, it will be n + (n-1) + ... + 1. The final result will be roughly 1/3 n^3.
 - The lesson hasn't introduced why we should do factorization of matrix. Just follow the matrix inverse lesson, it may look like ending the elemination of matrix with LU factorization which is the matrix form of Gauss-Jordan methon.
+
+### MIT Lesson 5
+
+Every matirx has its transpose matrix which has the property Aij = ATji. And when a matrix equles its transpose matrix, we can name it symmetric matrix. For a matrix A, whether it's rectangle or not, ATA is always a symmetrix matrix. According to the definition, (ATA)T = ATA.
+
+From the lesson 1 to lesson 5, the lesson is processing by solving the equation Ax=b, and the main method is Gauss-Jordan method. All these has been taught is different perspectives of Gauss-Jordan method, as to introduce some fundamental concepts about linear algebra. Then the lesson will process with the vector space, which is more abstract to learn the inherent property of matrix A.
+
+It's a new language to understand Ax = b in a high level.
+
+- Firstly, what's a vector space? Simply, if a space is close for the vector combination, it's a vector space. The vector combination refers to multiply by a number and vector adding. For example, R3 is a vector space.
+- Secondly, what's a subspace? If a space is the subset of a vector space, and still close to vector combination, it's a subspace for the bigger space. For example, the subspace of R2 should have 3 forms, the first one is itself which has 2 dimensions, the second one is a line through the origin which has 1 dimensions, the last one is the origin which only a point. As to higher dimension space, it's the same as 2 dimension, too.
+- Thirdly, what's the connection between vector space and matrix A? If we view A in the col picture, then A can be divided to some cols. These cols will form a vector space namely col space C(A). It's the central idea to understand the matrix A in a higher level which is the vector space. And the vector space has not only the column space, more spaces will be introduced later.
+
+### MIT Lesson 6
+
+What's the column space and why shall we be interested at it? To considet the system Ax = b, and not every b will make the system to be solved. The significant problem is what' b should be to get the system solved. Actually, it depends on the matrix A. The previous lessons has shown the  Ax means the combination of the columns of A. If we replay the insight in the vector space language, it will be Ax is a vector in the vector space created by the matrix A. So the key is the matrix A. The system can be solved when and just when b lies in the column space of A namely C(A).
+
+Another vector space we care about is nullspace, N(A). Nullspace is the vector of the combination of the solution Ax=0. The insight why we care about nullspace is two points.
+
+- Firstly, the nullspace is different from the column space because it consists of x, but the column space consists of A.
+- Secondly, the dimension of nullspace the the dimension of column space have some connections.
+
+Something should be cared that nullspace is a vector space because b is 0. If b is not 0, x will not be a space. The insight is a vector space must be through the origin. If b is not 0, 0 will not the solution of the system. 
+
